@@ -1,60 +1,57 @@
-# 🎲 Simulador de Dado (GUI)
+# 🎲 Simulador de Dado Interativo (GUI)
 
-Um simulador de dado com interface gráfica feito em **Python** usando a biblioteca **Tkinter**!  
-Escolha quantas faces o dado terá, role quantas vezes quiser e acompanhe seu histórico de jogadas.
+![Feito com Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Interface Tkinter](https://img.shields.io/badge/GUI-Tkinter-green)
+![Status do Projeto](https://img.shields.io/badge/Status-Concluído-brightgreen)
+![Plataforma](https://img.shields.io/badge/Plataforma-Pydroid%203-yellow)
+![Licença](https://img.shields.io/badge/Licença-MIT-blue)
+
+Um simulador de dado com interface gráfica usando **Tkinter**! Personalize o número de faces, veja histórico, limpe rolagens e divirta-se com cada lançamento.
+
+Este projeto foi desenvolvido para **praticar lógica de programação** e melhorar o entendimento sobre **estruturas de controle**, **interfaces gráficas** e **manipulação de dados** em Python.
 
 ---
 
 ## ✨ Funcionalidades
 
-- ✅ Escolha personalizada do número de faces  
-- 🎲 Botão para rolar o dado  
-- 📜 Histórico dos resultados  
-- 🧼 Opção para limpar o histórico  
-- 🔢 Contador de rolagens  
+- 🎯 Escolha o número de faces do dado (mínimo 2)
+- 🎲 Role o dado com apenas um clique
+- 📜 Acompanhe o histórico de resultados
+- ♻️ Limpe o histórico quando quiser
+- 🔢 Veja o total de rolagens realizadas
+- 🖥️ Interface simples, responsiva e colorida
 
 ---
 
-## 🛠️ Tecnologias
+## 🛠️ Tecnologias utilizadas
 
-- **Python 3**
-- **Tkinter** (para interface gráfica)
-- **random** (módulo nativo para números aleatórios)
-
----
-
-## ▶️ Como usar
-
-1. Abra o arquivo `simulador_dado.py` com Python 3.
-2. Digite o número de faces do dado (mínimo 2) e clique em **Iniciar**.
-3. Use os botões:
-   - **Rolar Dado** para sortear um número.
-   - **Ver Histórico** para ver todos os resultados.
-   - **Limpar Histórico** para resetar os dados.
+- 🐍 Python 3
+- 🖼️ Tkinter (GUI)
+- 🎲 Biblioteca `random`
 
 ---
 
-## 🖼️ Preview
+## 🚀 Como usar
 
-*Adicione aqui uma imagem ou print do programa rodando quando quiser.*
-
----
-
-## 📦 Requisitos
-
-- Python 3.x
-- Tkinter (já incluso na maioria das instalações do Python)
+1. Execute o código no seu ambiente Python (como **Pydroid 3** no celular ou Python no PC).
+2. Digite o número de faces do dado e clique em **Iniciar**.
+3. Pressione **Rolar Dado** para lançar!
+4. Explore o **histórico** ou **limpe** quando quiser.
 
 ---
 
-## 👤 Autor
+## 🖼️ Exemplo visual
 
-Desenvolvido por [Elly0x](https://github.com/Elly0x).  
-Contribuições e melhorias são bem-vindas!
+![Print do programa](https://raw.githubusercontent.com/Elly0x/simulador-dado/refs/heads/main/assets/Screenshot_20250502-134650_Pydroid%203.jpg)
+
+---
+## 👤 Autor(a)
+
+Desenvolvido por [**Elly0x**](https://github.com/Elly0x)  
+Estudante e desenvolvedora iniciante apaixonada por jogos, lógica e criatividade!
 
 ---
 
-## ⭐ Contribua
+## ⭐ Curtiu?
 
-Se você gostou do projeto, deixe uma estrela no repositório!  
-Sinta-se à vontade para abrir issues ou enviar pull requests.
+Se gostou do projeto, deixe uma **estrela** no repositório, compartilhe ou contribua com melhorias!
