@@ -55,3 +55,11 @@ Estudante e desenvolvedora iniciante apaixonada por jogos, lógica e criatividad
 ## ⭐ Curtiu?
 
 Se gostou do projeto, deixe uma **estrela** no repositório, compartilhe ou contribua com melhorias!
+
+
+---
+
+## ⚖️ Licença
+
+Este projeto está licenciado sob a Licença MIT.  
+Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
