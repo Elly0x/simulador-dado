@@ -34,12 +34,6 @@ class DadoApp:
         self.btn_limpar = tk.Button(master, text="Limpar Histórico", command=self.limpar_historico, state=tk.DISABLED, bg="red")
         self.btn_limpar.pack(pady=5)
 
-        self.btn_salvar = tk.Button(master, text="Salvar Histórico", command=self.salvar_historico, state=tk.DISABLED, bg="orange")
-        self.btn_salvar.pack(pady=5)
-
-        self.btn_reiniciar = tk.Button(master, text="Reiniciar", command=self.reiniciar, bg="purple", fg="white")
-        self.btn_reiniciar.pack(pady=5)
-
         self.contador_label = tk.Label(master, text="Total de Rolagens: 0", fg="white", bg="black")
         self.contador_label.pack(pady=5)
 
@@ -52,28 +46,16 @@ class DadoApp:
             self.btn_rolar.config(state=tk.NORMAL)
             self.btn_hist.config(state=tk.NORMAL)
             self.btn_limpar.config(state=tk.NORMAL)
-            self.btn_salvar.config(state=tk.NORMAL)
             messagebox.showinfo("Iniciado", f"Dado com {faces} faces pronto para uso!")
         except ValueError:
             messagebox.showerror("Erro", "Digite um número válido (mínimo 2).")
 
     def rolar_dado(self):
-        self.btn_rolar.config(state=tk.DISABLED)
-        self.resultado_label.config(text="Rolando...")
-        self.master.after(100, self.animar_rolagem, 0)
-
-    def animar_rolagem(self, etapa):
-        if etapa < 10:
-            resultado_temp = random.randint(1, self.faces_num)
-            self.resultado_label.config(text=f"... {resultado_temp}")
-            self.master.after(100, self.animar_rolagem, etapa + 1)
-        else:
-            resultado = random.randint(1, self.faces_num)
-            self.historico.append(resultado)
-            self.contador += 1
-            self.resultado_label.config(text=f"Você rolou: {resultado}")
-            self.contador_label.config(text=f"Total de Rolagens: {self.contador}")
-            self.btn_rolar.config(state=tk.NORMAL)
+        resultado = random.randint(1, self.faces_num)
+        self.historico.append(resultado)
+        self.contador += 1
+        self.resultado_label.config(text=f"Você rolou: {resultado}")
+        self.contador_label.config(text=f"Total de Rolagens: {self.contador}")
 
     def mostrar_historico(self):
         if not self.historico:
@@ -88,32 +70,6 @@ class DadoApp:
         self.contador_label.config(text="Total de Rolagens: 0")
         messagebox.showinfo("Limpo", "Histórico limpo.")
 
-    def salvar_historico(self):
-        if not self.historico:
-            messagebox.showinfo("Salvar Histórico", "Nenhum dado para salvar.")
-        else:
-            try:
-                with open("historico_dado.txt", "w") as file:
-                    file.write(", ".join(str(x) for x in self.historico))
-                messagebox.showinfo("Salvo", "Histórico salvo em 'historico_dado.txt'")
-            except Exception as e:
-                messagebox.showerror("Erro", f"Erro ao salvar o arquivo: {e}")
-
-    def reiniciar(self):
-        self.faces_num = 6
-        self.historico.clear()
-        self.contador = 0
-        self.entry.delete(0, tk.END)
-        self.entry.insert(0, "6")
-        self.resultado_label.config(text="")
-        self.contador_label.config(text="Total de Rolagens: 0")
-        self.btn_rolar.config(state=tk.DISABLED)
-        self.btn_hist.config(state=tk.DISABLED)
-        self.btn_limpar.config(state=tk.DISABLED)
-        self.btn_salvar.config(state=tk.DISABLED)
-        messagebox.showinfo("Reiniciado", "O simulador foi reiniciado.")
-
-# Executar o app
 root = tk.Tk()
 app = DadoApp(root)
 root.mainloop()
